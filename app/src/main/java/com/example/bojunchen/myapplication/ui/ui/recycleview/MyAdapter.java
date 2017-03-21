@@ -127,6 +127,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 @Override
                 public boolean onLongClick(View v) {
                     final String[] btnTexts = {"置顶", "删除"};
+                    // Todo : 找出原因，为什么必须传递R.style.MyDialogTheme参数
                     final AlertDialog.Builder db =  new AlertDialog.Builder(mContext, R.style.MyDialogTheme);
                     db.setCancelable(true)
                             .setItems(btnTexts, new DialogInterface.OnClickListener() {
