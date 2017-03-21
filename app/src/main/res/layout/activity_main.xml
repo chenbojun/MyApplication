@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:elevation="0dp">
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="ripple效果测试按钮(elevation=2dp)"
+        android:gravity="center"
+        style="@style/Widget.Button.Red"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="ripple效果测试按钮(elevation=8dp)"
+        android:gravity="center"
+        style="@style/Widget.Button.Red"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="RecycleViewActivity"
+        android:gravity="center"
+        style="@style/Widget.Button.Red"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_view_drag_helper"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="TestViewDragHelperActivity"
+        android:gravity="center"
+        style="@style/Widget.Button.Red"/>
+
+</LinearLayout>
