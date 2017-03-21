@@ -1,6 +1,8 @@
 package com.example.bojunchen.myapplication.ui.ui.recycleview;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -10,10 +12,12 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bojunchen.myapplication.R;
 import com.example.bojunchen.myapplication.ui.utils.MeasureUtil;
 
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -105,24 +109,82 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         TextView tvDes;
 
+        TextView tvMoveToTop;
+
+        TextView tvDelete;
+
         public ItemViewHolder(View itemView) {
             super(itemView);
             imageView = (ImageView) itemView.findViewById(R.id.image_view);
             tvName = (TextView) itemView.findViewById(R.id.tv_name);
             tvDes = (TextView) itemView.findViewById(R.id.tv_des);
+            tvMoveToTop = (TextView) itemView.findViewById(R.id.tv_top);
+            tvDelete = (TextView) itemView.findViewById(R.id.tv_delete);
         }
 
         public void render(final ItemSource itemSoure) {
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    int index = mDatas.indexOf(itemSoure);
-                    MyAdapter.this.notifyItemRemoved(index + 1);
-                    mDatas.remove(index);
+                    final String[] btnTexts = {"置顶", "删除"};
+                    final AlertDialog.Builder db =  new AlertDialog.Builder(mContext, R.style.MyDialogTheme);
+                    db.setCancelable(true)
+                            .setItems(btnTexts, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    switch (which) {
+                                        case 0: {
+                                            // 置顶
+                                            int index = mDatas.indexOf(itemSoure);
+                                            MyAdapter.this.notifyItemMoved(index + 1, 1);
+                                            Collections.swap(mDatas, index, 0);
+                                            break;
+                                        }
+
+                                        case 1: {
+                                            // 删除
+                                            int index = mDatas.indexOf(itemSoure);
+                                            MyAdapter.this.notifyItemRemoved(index + 1);
+                                            mDatas.remove(index);
+                                            break;
+                                        }
+                                    }
+                                }
+                            });
+                    db.create().show();
                     return true;
                 }
             });
 
+            // 查看详情页
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(mContext, "进入学生成绩详情页面！", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            // 置顶
+            tvMoveToTop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int index = mDatas.indexOf(itemSoure);
+                    MyAdapter.this.notifyItemMoved(index + 1, 1);
+                    Collections.swap(mDatas, index, 0);
+                }
+            });
+
+            // 删除
+            tvDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int index = mDatas.indexOf(itemSoure);
+                    MyAdapter.this.notifyItemRemoved(index + 1);
+                    mDatas.remove(index);
+                }
+            });
+
+            // 设置点击左侧图片可移动卡片
             imageView.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {

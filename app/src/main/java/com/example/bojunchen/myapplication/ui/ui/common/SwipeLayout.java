@@ -173,6 +173,7 @@ public class SwipeLayout extends FrameLayout{
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
         viewDragHelper.processTouchEvent(event);
         return true;
     }

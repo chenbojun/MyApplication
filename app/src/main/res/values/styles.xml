@@ -12,4 +12,6 @@
 
     </style>
 
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert" />
+
 </resources>
