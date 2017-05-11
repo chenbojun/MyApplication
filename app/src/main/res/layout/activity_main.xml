@@ -56,10 +56,22 @@
         android:layout_height="10dp"/>
 
     <TextView
-        android:id="@+id/tv_material_study_samples"
+        android:id="@+id/tv_material_study_1"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="Material Study Samples"
+        android:text="Material Study 1"
+        android:gravity="center"
+        style="@style/Widget.Button.White"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_material_study_2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Material Study 2"
         android:gravity="center"
         style="@style/Widget.Button.White"/>
 

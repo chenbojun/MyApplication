@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import com.example.bojunchen.myapplication.R;
 import com.example.bojunchen.myapplication.ui.ui.common.BaseActivity;
 import com.example.bojunchen.myapplication.ui.ui.materialdesign.MaterialActivity1;
+import com.example.bojunchen.myapplication.ui.ui.materialdesign.MaterialActivity2;
 import com.example.bojunchen.myapplication.ui.ui.recycleview.SecondActivity;
 import com.example.bojunchen.myapplication.ui.ui.rn.MyReactActivity;
 import com.example.bojunchen.myapplication.ui.ui.viewdraghelper.TestViewDragHelperActivity;
@@ -63,10 +64,17 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        findViewById(R.id.tv_material_study_samples).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.tv_material_study_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MaterialActivity1.startActivity(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.tv_material_study_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MaterialActivity2.startActivity(MainActivity.this);
             }
         });
 
