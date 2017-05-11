@@ -13,7 +13,7 @@
         android:layout_height="45dp"
         android:text="ripple效果测试按钮(elevation=2dp)"
         android:gravity="center"
-        style="@style/Widget.Button.Red"/>
+        style="@style/Widget.Button.White"/>
 
     <View
         android:layout_width="match_parent"
@@ -25,7 +25,7 @@
         android:layout_height="45dp"
         android:text="ripple效果测试按钮(elevation=8dp)"
         android:gravity="center"
-        style="@style/Widget.Button.Red"/>
+        style="@style/Widget.Button.White"/>
 
     <View
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
         android:layout_height="45dp"
         android:text="RecycleViewActivity"
         android:gravity="center"
-        style="@style/Widget.Button.Red"/>
+        style="@style/Widget.Button.White"/>
 
     <View
         android:layout_width="match_parent"
@@ -49,6 +49,30 @@
         android:layout_height="45dp"
         android:text="TestViewDragHelperActivity"
         android:gravity="center"
-        style="@style/Widget.Button.Red"/>
+        style="@style/Widget.Button.White"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_material_study_samples"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Material Study Samples"
+        android:gravity="center"
+        style="@style/Widget.Button.White"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_react_example"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="React_example"
+        android:gravity="center"
+        style="@style/Widget.Button.White"/>
 
 </LinearLayout>

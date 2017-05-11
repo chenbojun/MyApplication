@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bojunchen.myapplication">
 
+	<uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_action_yinyang"
@@ -12,15 +15,23 @@
         <activity android:name=".ui.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.ui.recycleview.SecondActivity">
+        <activity android:name=".ui.ui.recycleview.SecondActivity"></activity>
+        <activity android:name=".ui.ui.viewdraghelper.TestViewDragHelperActivity"></activity>
+        <activity android:name=".ui.ui.materialdesign.MaterialActivity1"
+            android:theme="@style/Base.Theme.AppCompat.Light">
         </activity>
 
-        <activity android:name=".ui.ui.viewdraghelper.TestViewDragHelperActivity">
-        </activity>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+	    <activity
+		    android:name=".ui.ui.rn.MyReactActivity"
+		    android:label="@string/app_name"
+		    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+	    </activity>
 
     </application>
 

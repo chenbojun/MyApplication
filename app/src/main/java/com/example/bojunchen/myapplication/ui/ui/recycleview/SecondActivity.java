@@ -10,7 +10,7 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.widget.Toast;
 
 import com.example.bojunchen.myapplication.R;
-import com.example.bojunchen.myapplication.ui.ui.BaseActivity;
+import com.example.bojunchen.myapplication.ui.ui.common.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;

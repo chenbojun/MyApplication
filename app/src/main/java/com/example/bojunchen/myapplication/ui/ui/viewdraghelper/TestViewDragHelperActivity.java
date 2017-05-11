@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.example.bojunchen.myapplication.R;
-import com.example.bojunchen.myapplication.ui.ui.BaseActivity;
+import com.example.bojunchen.myapplication.ui.ui.common.BaseActivity;
 import com.example.bojunchen.myapplication.ui.ui.common.SwipeLayout;
 
 /**

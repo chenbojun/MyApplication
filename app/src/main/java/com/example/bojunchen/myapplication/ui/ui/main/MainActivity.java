@@ -10,8 +10,10 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.example.bojunchen.myapplication.R;
-import com.example.bojunchen.myapplication.ui.ui.BaseActivity;
+import com.example.bojunchen.myapplication.ui.ui.common.BaseActivity;
+import com.example.bojunchen.myapplication.ui.ui.materialdesign.MaterialActivity1;
 import com.example.bojunchen.myapplication.ui.ui.recycleview.SecondActivity;
+import com.example.bojunchen.myapplication.ui.ui.rn.MyReactActivity;
 import com.example.bojunchen.myapplication.ui.ui.viewdraghelper.TestViewDragHelperActivity;
 
 public class MainActivity extends BaseActivity {
@@ -29,6 +31,7 @@ public class MainActivity extends BaseActivity {
         }
         initListener();
         handleStatusBar();
+
     }
 
     private void initListener() {
@@ -38,22 +41,39 @@ public class MainActivity extends BaseActivity {
                 SecondActivity.startActivity(MainActivity.this);
             }
         });
+
         findViewById(R.id.tv_view_drag_helper).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TestViewDragHelperActivity.startActivity(MainActivity.this);
             }
         });
+
         findViewById(R.id.btn_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
+
         findViewById(R.id.btn_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+        findViewById(R.id.tv_material_study_samples).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MaterialActivity1.startActivity(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.tv_react_example).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyReactActivity.startActivity(MainActivity.this);
             }
         });
     }

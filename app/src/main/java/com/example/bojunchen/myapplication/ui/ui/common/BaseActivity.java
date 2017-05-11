@@ -1,4 +1,4 @@
-package com.example.bojunchen.myapplication.ui.ui;
+package com.example.bojunchen.myapplication.ui.ui.common;
 
 import android.support.v4.app.FragmentActivity;
 
